@@ -31,6 +31,7 @@ public class Exercise1 {
         System.out.println("\nPrint first names of all users in userStream");
         StreamSources.userStream().map(User::getFirstName).forEach(System.out::println);
 
+        // can optimize the code 
         System.out.println("\nPrint first names in userStream for users that have IDs from number stream");
         List<Integer> intNumberStreamNum = StreamSources.intNumbersStream().toList();
         List<User> collectedUser = StreamSources.userStream().toList();
